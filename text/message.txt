@@ -1,0 +1,44 @@
+Toolkit Menu
+Toolkit Menu
+#
+#
+Toolkit Button
+Toolkit Button
+#
+#
+OTK-CPP Button
+OTK-CPP Button
+#
+#
+OTK-JAVA Button
+OTK-JAVA Button
+#
+#
+msg%f
+%0f
+#
+#
+msg%d
+%0d
+#
+#
+msg%s
+%0s
+#
+#
+msg%w
+%0w
+#
+#
+msg%e
+%0e
+#
+#
+msg%g
+%0g
+#
+#
+msg%d%d
+%0d - %1d
+#
+#

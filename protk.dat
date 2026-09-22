@@ -1,0 +1,15 @@
+NAME       PTK_DLL
+EXEC_FILE  .\build\release\bin\ptk_startup.dll
+TEXT_DIR   .\text
+delay_start true
+allow_stop true
+STARTUP    dll
+END
+
+NAME       PTK_DLL_DEBUG
+EXEC_FILE  .\build\debug\bin\ptk_startup.dll
+TEXT_DIR   .\text
+delay_start false
+allow_stop true
+STARTUP    dll
+END

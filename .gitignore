@@ -1,0 +1,37 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Libraries
+*.lib
+*.a
+*.dll
+
+# Debug / symbols
+*.pdb
+*.ilk
+
+# Build directories
+build/
+bin/
+obj/
+out/
+
+# Temporary files
+*.tmp
+*.log
+
+# Misc
+*.cache
+*.bak
+*.orig
+
+# creo
+*.[0-9]
+std.out
+
