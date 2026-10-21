@@ -41,11 +41,8 @@ INCS = -I$(INC_DIR) -I$(PROTOOL_SRC)/protk_appls/includes -I$(PROTOOL_SRC)/inclu
 # Compiler
 CC = cl
 MACH = -DPRO_MACHINE=36 -DPRO_OS=4
-CCFLAGS = -c -GS -fp:precise -D_WSTDIO_DEFINED
+CCFLAGS = /c /GS /fp:precise -D_WSTDIO_DEFINED
 CFLAGS = $(CCFLAGS) $(INCS) $(MACH) $(CFLAGS_EXTRA)
-
-# Libraries
-SMALIBS = ../smalib/build/bin/smalib.lib
 
 PTCLIBS = $(PROTOOL_SYS)/obj/protoolkit_NU.lib \
           $(ICU_PATH)/ucore.lib \
@@ -67,13 +64,13 @@ init:
 
 dll: init $(EXE_DLL)
 
-$(EXE_DLL): $(OBJS) $(PTCLIBS_DLL) $(SMALIBS)
+$(EXE_DLL): $(OBJS) $(PTCLIBS_DLL)
     $(LINK) $(LINKFLAGS) -out:$(EXE_DLL) /dll @<<longline.list
-$(OBJS) $(PTCLIBS_DLL) $(LIBS) $(SMALIBS)
+$(OBJS) $(PTCLIBS_DLL) $(LIBS)
 <<
 
 {$(SRC_DIR)}.c{$(OBJ_DIR)}.obj:
-    $(CC) $(CFLAGS) /c $< /Fo$@
+    $(CC) $(CFLAGS) $< /Fo$@
 
 clean:
     if exist "build" rmdir /S /Q "build"
