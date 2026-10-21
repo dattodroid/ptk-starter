@@ -54,7 +54,7 @@ int user_initialize()
 int button_callback(ProAppData arg_1, int arg_2)
 {
 	ProError perr = PRO_TK_NO_ERROR;
-	ProUIMessageButton buttons[] = {PRO_UI_MESSAGE_OK};
+	ProUIMessageButton *buttons;
 	ProUIMessageButton user_choice;
 
 	perr = ProArrayAlloc(1, sizeof(ProUIMessageButton),
@@ -68,7 +68,7 @@ int button_callback(ProAppData arg_1, int arg_2)
 									 buttons,
 									 PRO_UI_MESSAGE_OK,
 									 &user_choice);
-	LOG_RC(ProMessageDisplay, perr);
+	LOG_RC(ProUIMessageDialogDisplay, perr);
 
 	ProArrayFree((ProArray *)&buttons);
 
